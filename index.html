@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="link"></div>
+    <p class="paragraph"></p>
+    <div class="link"></div>
+    <p class="paragraph"></p>
+    <div class="link"></div>
+    <p class="paragraph"></p>
+    <div class="link"></div>
+    <p class="paragraph"></p>
+    <div class="link"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script>
+      //   document.querySelectorAll('.link').forEach((item) => {
+      //     const anchorElement = document.createElement('a')
+      //     anchorElement.textContent = 'Notion'
+      //     anchorElement.href = 'https://www.notion.so/'
+      //     anchorElement.target = '_self'
+      //     anchorElement.rel = 'noopener noreferrer'
+      //     item.appendChild(anchorElement)
+      //   })
+      //   document.querySelectorAll('.paragraph').forEach((p) => {
+      //     p.textContent =
+      //       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officia?'
+      //   })
+      document.querySelectorAll('.link').forEach((item) => {
+        const anchorElement = React.createElement(
+          'a',
+          {
+            href: 'https://www.notion.so/',
+            terget: '_blant',
+            rel: 'noopener noreferrer',
+          },
+          'Notion'
+        )
+        console.log(anchorElement)
+        ReactDOM.createRoot(item).render(anchorElement)
+      })
+
+      document.querySelectorAll('.paragraph').forEach((p) => {
+        p.textContent =
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officia?'
+      })
+    </script>
+  </body>
+</html>
