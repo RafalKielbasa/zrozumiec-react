@@ -1,1 +1,0 @@
-# zrozumie--react
